@@ -3,11 +3,11 @@ import React from "react";
 interface ButtonProps {
   type?: "text" | "normal" | "outline";
   variant?: "primary" | "secondary" | "tertiary" | "white";
-  size?: "size-1" | "size-2" | "size-3"|"size-4"|"size-5"|"size-6"|"size-7"|"size-8";
+  size?: "size-1" | "size-2" | "size-3" | "size-4" | "size-5" | "size-6" | "size-7" | "size-8";
   loading?: boolean;
   disabled?: boolean;
   width?: "auto" | "full";
-customClass?:string;
+  customClass?: string;
   children?: React.ReactNode;
   onClick?: () => void;
 }
@@ -19,18 +19,17 @@ const Button: React.FC<ButtonProps> = ({
   loading = false,
   disabled = false,
   width = "auto",
-  customClass="",
+  customClass = "",
   children,
   onClick,
 }) => {
   // Base classes
-  const baseClass =
-    "rounded font-semibold text-center cursor-pointer transition duration-300";
+  const baseClass = "rounded font-semibold text-center cursor-pointer transition duration-300";
 
   // Type-specific classes
   const typeClass = {
     normal: "",
-    text: "bg-transparent border-none px-[0px] h-[0px]",
+    text: "bg-transparent border-none px-0 py-0 h-auto",
     outline: `bg-transparent border ${
       variant === "primary"
         ? "border-customcolor-750"
@@ -47,19 +46,19 @@ const Button: React.FC<ButtonProps> = ({
     primary: `bg-customcolor-750 text-white`,
     secondary: `bg-customcolor-300 text-customcolor-100`,
     tertiary: `bg-customcolor-1150 text-customcolor-500`,
-    white: `bg-customcolor-100 text-customcolor-600`,
+    white: `bg-customcolor-100 text-customcolor-750`,
   }[variant];
 
   // Size-specific classes
   const sizeClass = {
-    "size-1": "h-[36px] px-[16px] text-[16px] font-regular", 
-    "size-2": "h-[40px] px-[12px] text-[14px] font-regular", 
-    "size-3": "h-[40px] px-[16px] text-[16px] font-regular", 
-    "size-4": "h-[44px] px-[20px] text-[16px] font-regular", 
-    "size-5": "h-[50px] px-[40px] text-[14px] font-regular", 
-    "size-6": "h-[58px] px-[30px] text-[16px] font-semiBold", 
-    "size-7": "h-[64px] px-[40px] text-[16px] font-semiBold", 
-    "size-8": "h-[68px] px-[40px] text-[16px]", 
+    "size-1": "h-[36px] px-[16px] text-[16px] font-regular",
+    "size-2": "h-[40px] px-[12px] text-[14px] font-regular",
+    "size-3": "h-[40px] px-[16px] text-[16px] font-regular",
+    "size-4": "h-[44px] px-[20px] text-[16px] font-regular",
+    "size-5": "h-[50px] px-[40px] text-[14px] font-regular",
+    "size-6": "h-[58px] px-[30px] text-[16px] font-semiBold",
+    "size-7": "h-[64px] px-[40px] text-[16px] font-semiBold",
+    "size-8": "h-[68px] px-[40px] text-[16px]",
   }[size];
 
   // width-specific classes

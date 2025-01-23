@@ -7,6 +7,7 @@ interface GenericTextProps{
   lineHeight?:"xsm"|"sm"|"md"|"lg"|"xlg"|"2xl"|"3xl"|"4xl"|"5xl"|"5xl"|"7xl"|"8xl"|"9xl"|"10xl"|"11xl"|"12xl"|"13xl";
   color?:"text-1"|"text-2"|"text-3"|"text-4"|"text-5"|"text-6"|"text-7";
   fontWeight?:"regular"|"medium"|"semiBold"|"bold";
+  textDecoration?:"underline"|"overline" |"line-through"|"none";
   children?:React.ReactNode;
 }
 const responsiveSizes: Record<string, string> = {
@@ -37,19 +38,26 @@ const customTextColors: Record<string, string> = {
 "text-6":"text-customcolor-750",//"#0052CC",
 "text-7":"text-customcolor-950",//#00AF70",
 }
-
+const textDecorates:Record<string, string> ={
+  "underline":"underline",
+  "overline":"overline",
+  "line-through":"line-through",
+  "none":"no-underline"
+}
 const fontWeights: Record<string, string> = {
   regular: "font-regular",
   medium: "font-medium",
   semiBold: "font-semiBold",
   bold: "font-bold",
 };
+
 const GenericText: React.FC<GenericTextProps> = ({
   children,
   elementType = "p",
   size = "md",
   textAlign = "start",
   lineHeight = "leading-normal",
+  textDecoration="none",
   color = "text-1",
   fontWeight = "regular",
 }) => {
@@ -57,9 +65,9 @@ const GenericText: React.FC<GenericTextProps> = ({
   const responsiveClass = responsiveSizes[size] || "";
   const textCustomColors =  customTextColors[color] || "";
   const weightClass = fontWeights[fontWeight] || "";
-  const className = `${responsiveClass} ${weightClass} text-${textAlign} ${lineHeight} ${textCustomColors}`;
+  const textDecorate = textDecorates[textDecoration] || ""
+  const className = `${responsiveClass} ${weightClass} text-${textAlign} ${lineHeight} ${textCustomColors} ${textDecorate}`;
 
-  console.log("Generated ClassName:", className); 
 
   return <Component className={className}>{children}</Component>;
 };

@@ -4,6 +4,7 @@ import GoogleIcon from "@/assets/icons/googleIcon";
 import LineArrow from "@/assets/icons/lineArrow";
 import { LadingFooter } from "@/components/common/LandingFooter";
 import Header from "@/components/common/header";
+import HeroSection from "@/components/pages/landing/hero";
 import Button from "@/shared/ui/button";
 import GenericText from "@/shared/ui/genericText";
 
@@ -12,6 +13,7 @@ const Landing = () => {
     <div className="wrapper">
       <Header />
       <main>
+        <HeroSection/>
         <GenericText fontWeight="bold" elementType="p" size="2xl" color="text-6">
           Generic Text
         </GenericText>

@@ -2,9 +2,10 @@ interface Props {
   size?: "sm" | "lg";
   rotate?: "top" | "bottom" | "left" | "right";
   style?: React.CSSProperties; 
+  className?:string;
 }
 
-const ArrowIcon = ({ size = "sm", rotate = "top", style = {} }: Props) => {
+const ArrowIcon = ({ size = "sm", rotate = "top", style = {},className }: Props) => {
   let content: React.ReactNode = "";
   let rotation: React.CSSProperties = {};
 
@@ -40,6 +41,7 @@ const ArrowIcon = ({ size = "sm", rotate = "top", style = {} }: Props) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           style={mergedStyle}
+          className={className}
         >
           <path
             d="M2.72003 5.9667L7.0667 10.3134C7.58003 10.8267 8.42003 10.8267 8.93336 10.3134L13.28 5.9667"

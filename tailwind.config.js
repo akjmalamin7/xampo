@@ -10,8 +10,8 @@ export default {
         customcolor: {
           100: "#ffffff",
           150: "#F8F8FB",
-          200: "#F8F8FB",
-          250: "#F8F8FB",
+          200: "#e5eefa",
+          250: "#DBE9FD",
           300: "#74788D",
           350: "#74788D",
           400: "#74788D",

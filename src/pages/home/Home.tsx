@@ -1,6 +1,8 @@
 import ArrowIcon from "@/assets/icons/arrowIcon/ArrowIcon";
 import CartIcon from "@/assets/icons/cartIcon";
+import GoogleIcon from "@/assets/icons/googleIcon";
 import LineArrow from "@/assets/icons/lineArrow";
+import Button from "@/shared/ui/button";
 import GenericText from "@/shared/ui/genericText";
 
 const Home = () => {
@@ -13,6 +15,7 @@ const Home = () => {
       <ArrowIcon size="lg" rotate="top"/>
       <CartIcon/>
       <LineArrow/>
+      <Button children={<><GoogleIcon/> Google</>} variant="tertiary" type="outline" width="auto" size="size-1"/>
     </div>
   );
 };

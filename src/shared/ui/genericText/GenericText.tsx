@@ -29,19 +29,19 @@ const responsiveSizes: Record<string, string> = {
   "13xl": "text-64",
 };
 const customTextColors: Record<string, string> = {
-"text-1":"text-customcolor-100",
-"text-2":"text-customcolor-200",
-"text-3":"text-customcolor-300",
-"text-4":"text-customcolor-400",
-"text-5":"text-customcolor-500",
-"text-6":"text-customcolor-600",
-"text-7":"text-customcolor-700",
+"text-1":"text-customcolor-100",//"#ffffff",
+"text-2":"text-customcolor-150",//"#F8F8FB",
+"text-3":"text-customcolor-300",//"#74788D",
+"text-4":"text-customcolor-450",//#516986",
+"text-5":"text-customcolor-600",//#253642",
+"text-6":"text-customcolor-750",//"#0052CC",
+"text-7":"text-customcolor-950",//#00AF70",
 }
 
 const fontWeights: Record<string, string> = {
-  regular: "font-normal",
+  regular: "font-regular",
   medium: "font-medium",
-  semiBold: "font-semibold",
+  semiBold: "font-semiBold",
   bold: "font-bold",
 };
 const GenericText: React.FC<GenericTextProps> = ({

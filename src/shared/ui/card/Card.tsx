@@ -17,7 +17,7 @@ const paddings: Record<string, string> = {
   sm: "px-[24px] py-[24px]",
   md: "px-[53px] py-[46px]",
   lg: "px-[48px] py-[48px]",
-  xlg: "px-[76px] py-[68px]",
+  xlg: "px-[25px] lg:px-[76px] py-[25px] md:py-[68px]",
   "2xl": "px-[48px] py-[48px]",
 };
 const bgColors: Record<string, string> = {
@@ -28,7 +28,7 @@ const radiuses: Record<string, string> = {
   sm: "rounded-[8px]",
   md: "rounded-[24px]",
 };
-const Card = ({ cardStyle="shadow",padding = "md", bgColor = "white", radius = "md",className, children }: CardProps) => {
+const Card = ({ cardStyle="shadow",padding="none", bgColor = "white", radius = "md",className, children }: CardProps) => {
   const cardPaddings = paddings[padding] || "";
   const cardBgColors = bgColors[bgColor] || "";
   const cardRadius = radiuses[radius] || "";

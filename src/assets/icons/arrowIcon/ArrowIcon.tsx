@@ -1,11 +1,12 @@
 interface Props {
-  size?: "sm" | "lg";
+  size?: "sm" | "lg" | "line";
   rotate?: "top" | "bottom" | "left" | "right";
-  style?: React.CSSProperties; 
-  className?:string;
+  color?:"primary"|"secondary"|"tertiary";
+  style?: React.CSSProperties;
+  className?: string;
 }
 
-const ArrowIcon = ({ size = "sm", rotate = "top", style = {},className }: Props) => {
+const ArrowIcon = ({ size = "sm", rotate = "top",color="tertiary", style = {}, className }: Props) => {
   let content: React.ReactNode = "";
   let rotation: React.CSSProperties = {};
 
@@ -27,10 +28,8 @@ const ArrowIcon = ({ size = "sm", rotate = "top", style = {},className }: Props)
       break;
   }
 
- 
   const mergedStyle = { ...rotation, ...style };
 
- 
   switch (size) {
     case "sm":
       content = (
@@ -45,7 +44,7 @@ const ArrowIcon = ({ size = "sm", rotate = "top", style = {},className }: Props)
         >
           <path
             d="M2.72003 5.9667L7.0667 10.3134C7.58003 10.8267 8.42003 10.8267 8.93336 10.3134L13.28 5.9667"
-            stroke="#253642"
+            stroke={color === "primary"? "#0052CC":"#253642"}
             strokeWidth="1.5"
             strokeMiterlimit="10"
             strokeLinecap="round"
@@ -63,15 +62,43 @@ const ArrowIcon = ({ size = "sm", rotate = "top", style = {},className }: Props)
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          style={mergedStyle} 
+          style={mergedStyle}
         >
           <path
             d="M19.9201 8.94995L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.94995"
-            stroke="#292D32"
+            stroke={color === "primary"? "#0052CC":"#253642"}
             strokeWidth="1.5"
             strokeMiterlimit="10"
             strokeLinecap="round"
             strokeLinejoin="round"
+          />
+        </svg>
+      );
+      break;
+    case "line":
+      content = (
+        <svg
+          width="29"
+          height="17"
+          viewBox="0 0 29 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M23 4L27.075 8.075L23 12.15"
+            stroke={color === "primary"? "#0052CC":"#253642"}
+            stroke-width="2"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M1 8.05261H25.29"
+            stroke={color === "primary"? "#0052CC":"#253642"}
+            stroke-width="2"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
         </svg>
       );

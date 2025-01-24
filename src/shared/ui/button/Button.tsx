@@ -29,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
   // Type-specific classes
   const typeClass = {
     normal: "",
-    text: "bg-transparent border-none px-0 py-0 h-auto",
+    text: "bg-transparent border-none px-0 py-0 h-auto ",
     outline: `bg-transparent border ${
       variant === "primary"
         ? "border-customcolor-750"
@@ -56,7 +56,7 @@ const Button: React.FC<ButtonProps> = ({
     "size-3": "h-[40px] px-[16px] text-[16px] font-regular",
     "size-4": "h-[44px] px-[20px] text-[16px] font-regular",
     "size-5": "h-[50px] px-[40px] text-[14px] font-regular",
-    "size-6": "h-[58px] px-[30px] text-[16px] font-semiBold",
+    "size-6": "h-[40px] xl:h-[58px] px-[30px]  text-13 xl:text-[16px] font-semiBold rounded-[14px]",
     "size-7": "h-[50px] lg:h-[64px] px-[30px] lg:px-[40px] text-14 md:text-[16px] font-semiBold",
     "size-8": " h-[68px] px-[40px] text-[16px]",
   }[size];

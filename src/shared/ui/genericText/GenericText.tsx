@@ -8,6 +8,7 @@ interface GenericTextProps{
   color?:"text-1"|"text-2"|"text-3"|"text-4"|"text-5"|"text-6"|"text-7";
   fontWeight?:"regular"|"medium"|"semiBold"|"bold";
   textDecoration?:"underline"|"overline" |"line-through"|"none";
+  className?:string;
   children?:React.ReactNode;
 }
 const responsiveSizes: Record<string, string> = {
@@ -15,19 +16,19 @@ const responsiveSizes: Record<string, string> = {
   sm: "text-13",
   md: "text-14",
   lg: "text-14 md:text-16",
-  xlg: "text-18",
-  "2xl": "text-18 md:text-20",
-  "3xl": "text-22",
+  xlg: "text-12 md:text-13 lg:text-14 xl:text-18",
+  "2xl": "text-16 xl:text-20",
+  "3xl": "text-14 xl:text-22",
   "4xl": "text-24",
-  "5xl": "text-30",
+  "5xl": "text-22 lg:text-24 xl:text-30",
   "6xl": "text-32",
   "7xl": "text-36",
   "8xl": "text-40",
   "9xl": "text-48",
-  "10xl": "text-51",
-  "11xl": "text-51",
-  "12xl": "text-60",
-  "13xl": "text-30 md:text-60 lg:text-64",
+  "10xl": "text-30 lg:text-40 xl:text-51",
+  "11xl": " text-[28px] lg:text-51 ",
+  "12xl": "text-30 lg:text-60",
+  "13xl": "text-30 md:text-40 2xl:text-64",
 };
 const customTextColors: Record<string, string> = {
 "text-1":"text-customcolor-100",//"#ffffff",
@@ -58,6 +59,7 @@ const GenericText: React.FC<GenericTextProps> = ({
   textAlign = "start",
   lineHeight = "leading-normal",
   textDecoration="none",
+  className,
   color = "text-3",
   fontWeight = "regular",
 }) => {
@@ -66,10 +68,10 @@ const GenericText: React.FC<GenericTextProps> = ({
   const textCustomColors =  customTextColors[color] || "";
   const weightClass = fontWeights[fontWeight] || "";
   const textDecorate = textDecorates[textDecoration] || ""
-  const className = `${responsiveClass} ${weightClass} text-${textAlign} ${lineHeight} ${textCustomColors} ${textDecorate}`;
+  const finalClasses = `${responsiveClass} ${weightClass} text-${textAlign} ${lineHeight} ${textCustomColors} ${textDecorate} ${className}`;
 
 
-  return <Component className={className}>{children}</Component>;
+  return <Component className={finalClasses}>{children}</Component>;
 };
 
 export default GenericText

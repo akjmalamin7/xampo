@@ -7,11 +7,13 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   // pt-[50px] lg:pt-[133px] pb-[50px] lg:pb-[172px]
   return (
-    <div className="
-    bg-customcolor-750 pt-[50px] lg:pt-[133px] lg:pb-[10px]">
+    <div
+      className="
+    bg-customcolor-750 pt-[50px] lg:pt-[80px] 2xl:pt-[133px] lg:pb-[0px]"
+    >
       <Container width="md">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-[87px] ">
-          <div className="col-span-full lg:col-span-6 lg:pr-[15px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-[40px] lg:gap-[87px] ">
+          <div className="col-span-full lg:col-span-7 2xl:col-span-6 lg:pr-[15px] lg:pb-[80px]">
             <div>
               <GenericText color="text-1" elementType="h1" size="13xl" fontWeight="semiBold">
                 Complete your <span className="">IELTS</span> preparation at home.
@@ -23,7 +25,7 @@ const HeroSection = () => {
                 to score your destined one.
               </GenericText>
             </div>
-            <div className="mt-[36px] flex flex-col md:flex-row md:items-center gap-[32px]">
+            <div className="mt-[36px] flex flex-col sm:flex-row sm:items-center gap-[32px]">
               <div>
                 <Button variant="white" size="size-7" customClass="rounded-[14px]">
                   Start Free Pack
@@ -31,23 +33,26 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-[20px]">
                 <Button type="text" customClass="pr-0 pl-0">
-                  <PlayIcon />
+                  <PlayIcon className="w-[45px] lg:w-[52px] h-[45px] lg:h-[52px]" />
                 </Button>
-                <GenericText color="text-2" size="lg" fontWeight="semiBold" textDecoration="underline">
+                <GenericText
+                  color="text-2"
+                  size="lg"
+                  fontWeight="semiBold"
+                  textDecoration="underline"
+                >
                   <Link to={"#"}>See how it’s work</Link>
                 </GenericText>
               </div>
             </div>
           </div>
-          <div className="col-span-full lg:col-span-6">
-            <div className="flex justify-center">
+          <div className="col-span-full lg:col-span-5 2xl:col-span-6 flex items-end lg:items-center">
+            <div className="flex justify-center w-[80%] lg:w-[90%] xl:w-[100%] mx-auto">
               <img src={HERO_IMAGE} alt="Hero image" />
             </div>
           </div>
         </div>
-        <div>
-        </div>
-     
+        <div></div>
       </Container>
     </div>
   );

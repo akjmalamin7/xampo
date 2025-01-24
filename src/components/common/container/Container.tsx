@@ -1,6 +1,7 @@
 import React from "react";
 interface Props {
   width?: "sm" | "md" | "lg" | "xlg";
+  className?:string;
   children?: React.ReactNode;
 }
 const widths: Record<string, string> = {
@@ -10,9 +11,9 @@ const widths: Record<string, string> = {
   xlg: "max-w-[1440px]", 
 };
 
-const Container: React.FC<Props> = ({ width = "lg", children }) => {
+const Container: React.FC<Props> = ({ width = "lg", className, children }) => {
   const containerWidth = widths[width] || "w-full"; 
-  const finalClasses = `${containerWidth} w-full mx-auto px-[20px]`;
+  const finalClasses = `${containerWidth} w-full mx-auto px-[20px] ${className}`;
   return <div className={finalClasses}>{children}</div>;
 };
 

@@ -14,8 +14,8 @@ const Landing = () => {
         <HeroSection />
         <TrustedChoice />
         <PopularCourses />
-        <WeProvide/>
-        <OwnPackageBanner/>
+        <WeProvide />
+        <OwnPackageBanner />
       </main>
       <LadingFooter />
     </div>

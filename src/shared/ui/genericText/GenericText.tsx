@@ -1,15 +1,49 @@
 import React from "react";
 
-interface GenericTextProps{
-  elementType?:"p"|"span"|"h1"|"h2"|"h3"|"h4"|"h5"|"h6";
-  size?:"xsm"|"sm"|"md"|"lg"|"xlg"|"2xl"|"3xl"|"4xl"|"5xl"|"5xl"|"7xl"|"8xl"|"9xl"|"10xl"|"11xl"|"12xl"|"13xl";
-  textAlign?:"start"|"center"|"end";
-  lineHeight?:"xsm"|"sm"|"md"|"lg"|"xlg"|"2xl"|"3xl"|"4xl"|"5xl"|"5xl"|"7xl"|"8xl"|"9xl"|"10xl"|"11xl"|"12xl"|"13xl";
-  color?:"text-1"|"text-2"|"text-3"|"text-4"|"text-5"|"text-6"|"text-7"|"text-8";
-  fontWeight?:"regular"|"medium"|"semiBold"|"bold";
-  textDecoration?:"underline"|"overline" |"line-through"|"none";
-  className?:string;
-  children?:React.ReactNode;
+interface GenericTextProps {
+  elementType?: "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  size?:
+    | "xsm"
+    | "sm"
+    | "md"
+    | "lg"
+    | "xlg"
+    | "2xl"
+    | "3xl"
+    | "4xl"
+    | "5xl"
+    | "5xl"
+    | "7xl"
+    | "8xl"
+    | "9xl"
+    | "10xl"
+    | "11xl"
+    | "12xl"
+    | "13xl";
+  textAlign?: "start" | "center" | "end";
+  lineHeight?:
+    | "xsm"
+    | "sm"
+    | "md"
+    | "lg"
+    | "xlg"
+    | "2xl"
+    | "3xl"
+    | "4xl"
+    | "5xl"
+    | "5xl"
+    | "7xl"
+    | "8xl"
+    | "9xl"
+    | "10xl"
+    | "11xl"
+    | "12xl"
+    | "13xl";
+  color?: "text-1" | "text-2" | "text-3" | "text-4" | "text-5" | "text-6" | "text-7" | "text-8";
+  fontWeight?: "regular" | "medium" | "semiBold" | "bold";
+  textDecoration?: "underline" | "overline" | "line-through" | "none";
+  className?: string;
+  children?: React.ReactNode;
 }
 const responsiveSizes: Record<string, string> = {
   xsm: "text-12",
@@ -31,21 +65,21 @@ const responsiveSizes: Record<string, string> = {
   "13xl": "text-30 md:text-40 2xl:text-64",
 };
 const customTextColors: Record<string, string> = {
-"text-1":"text-customcolor-100",//"#ffffff",
-"text-2":"text-customcolor-150",//"#F8F8FB",
-"text-3":"text-customcolor-300",//"#74788D",
-"text-4":"text-customcolor-450",//#516986",
-"text-5":"text-customcolor-600",//#253642",
-"text-6":"text-customcolor-750",//"#0052CC",
-"text-7":"text-customcolor-950",//#00AF70",
-"text-8":"text-customcolor-650",//#1E266D",
-}
-const textDecorates:Record<string, string> ={
-  "underline":"underline",
-  "overline":"overline",
-  "line-through":"line-through",
-  "none":"no-underline"
-}
+  "text-1": "text-customcolor-100", //"#ffffff",
+  "text-2": "text-customcolor-150", //"#F8F8FB",
+  "text-3": "text-customcolor-300", //"#74788D",
+  "text-4": "text-customcolor-450", //#516986",
+  "text-5": "text-customcolor-600", //#253642",
+  "text-6": "text-customcolor-750", //"#0052CC",
+  "text-7": "text-customcolor-950", //#00AF70",
+  "text-8": "text-customcolor-650", //#1E266D",
+};
+const textDecorates: Record<string, string> = {
+  underline: "underline",
+  overline: "overline",
+  "line-through": "line-through",
+  none: "no-underline",
+};
 const fontWeights: Record<string, string> = {
   regular: "font-regular",
   medium: "font-medium",
@@ -59,20 +93,19 @@ const GenericText: React.FC<GenericTextProps> = ({
   size = "md",
   textAlign = "start",
   lineHeight = "leading-normal",
-  textDecoration="none",
+  textDecoration = "none",
   className,
   color = "text-3",
   fontWeight = "regular",
 }) => {
   const Component = elementType;
   const responsiveClass = responsiveSizes[size] || "";
-  const textCustomColors =  customTextColors[color] || "";
+  const textCustomColors = customTextColors[color] || "";
   const weightClass = fontWeights[fontWeight] || "";
-  const textDecorate = textDecorates[textDecoration] || ""
+  const textDecorate = textDecorates[textDecoration] || "";
   const finalClasses = `${responsiveClass} ${weightClass} text-${textAlign} ${lineHeight} ${textCustomColors} ${textDecorate} ${className}`;
-
 
   return <Component className={finalClasses}>{children}</Component>;
 };
 
-export default GenericText
+export default GenericText;

@@ -1,10 +1,10 @@
-import Container from "../container"
+import Container from "../../../common/container"
 
 const LadingFooter = () => {
   return (
     <footer>
       <div className="header-section">
-        <Container>
+        <Container width="lg">
           Footer
         </Container>
       </div>

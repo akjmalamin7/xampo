@@ -1,6 +1,6 @@
-import { LadingFooter } from "@/components/common/LandingFooter";
 import Header from "@/components/common/header";
 import HeroSection from "@/components/pages/landing/hero";
+import { LadingFooter } from "@/components/pages/landing/LandingFooter";
 import OwnPackageBanner from "@/components/pages/landing/ownPackageBanner";
 import PopularCourses from "@/components/pages/landing/popularCourses";
 import TrustedChoice from "@/components/pages/landing/trustedChoice";

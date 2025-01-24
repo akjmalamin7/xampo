@@ -1,7 +1,9 @@
 
 const Select = () => {
   return (
-    <div>Select</div>
+    <div>
+      <Select></Select>
+    </div>
   )
 }
 

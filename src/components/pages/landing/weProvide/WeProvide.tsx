@@ -16,6 +16,7 @@ const WeProvide = () => {
             Some popular courses
           </LandingSectionTitle>
 
+        </div>
           {/* @______# services #_______@ */}
           <div className="flex flex-wrap gap-4 lg:gap-6 lg:flex-row lg:justify-between flex-col items-center">
             <Card className="flex-1 px-[27px] py-[80px] w-full lg:w-auto">
@@ -46,7 +47,6 @@ const WeProvide = () => {
               </div>
             </Card>
           </div>
-        </div>
       </Container>
     </div>
   );

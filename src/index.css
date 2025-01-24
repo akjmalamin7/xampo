@@ -3,5 +3,6 @@
 @tailwind utilities;
 body{
   font-family: "Sora", serif;
+  background-color: #f8f8fb;
 }
 

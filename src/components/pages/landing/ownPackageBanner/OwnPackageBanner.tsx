@@ -5,7 +5,7 @@ import Button from "@/shared/ui/button";
 import GenericText from "@/shared/ui/genericText";
 const OwnPackageBanner = () => {
   return (
-    <section className="py-[40px] lg:py-[70px] xl:py-[100px]">
+    <section className="bg-customcolor-100 py-[40px] lg:py-[70px] xl:py-[100px]">
       <Container width="md">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-[30px] lg:gap-x-[40px]">
           <div className="col-span-5 flex flex-col justify-center">

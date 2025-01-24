@@ -1,6 +1,7 @@
 import Header from "@/components/common/header";
 import { Outlet } from "react-router-dom";
 import { Fragment } from "react/jsx-runtime";
+import FooterSocket from "../footerSocket/FooterSocket";
 
 const DashboardLayout = () => {
   return (
@@ -11,7 +12,7 @@ const DashboardLayout = () => {
       </main>
       {/* Conditionally render footer based on page */}
       <footer>
-        {/* Render different footer components here */}
+        <FooterSocket />
       </footer>
     </Fragment>
   );

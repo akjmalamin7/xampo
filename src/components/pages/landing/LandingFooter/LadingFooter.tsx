@@ -3,15 +3,14 @@ import MailIcon from "@/assets/icons/mailIcon";
 import LOGO from "@/assets/images/logoForFooter.png";
 import MAAC_LOGO from "@/assets/images/MAAC.png";
 import PAYMENT_GETWAY from "@/assets/images/paymentGetway.png";
+import FooterSocket from "@/components/common/footerSocket/FooterSocket";
 import GenericText from "@/shared/ui/genericText";
 import { Link } from "react-router-dom";
 import Container from "../../../common/container";
-import SocketMenu from "./SocketMenu";
 const LadingFooter = () => {
-  const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-customcolor-500">
-      <div className="pt-[50px] pb-[30px] lg:pt-[95px] lg:pb-[45px] border-b border-b-[#253642]">
+    <footer>
+      <div className="bg-customcolor-500 pt-[50px] pb-[30px] lg:pt-[95px] lg:pb-[45px] border-b border-b-[#253642]">
         <Container width="lg">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-[35px]">
             <div className="col-span-4">
@@ -75,16 +74,7 @@ const LadingFooter = () => {
           </div>
         </Container>
       </div>
-      <div className="py-[26px]">
-        <Container width="lg">
-          <div className="flex flex-col items-center gap-y-[16px] lg:justify-between ">
-            <GenericText className="text-[14px] lg:text-[15px]" color="text-1" fontWeight="regular">
-              &copy; {currentYear} Xampro
-            </GenericText>
-            <SocketMenu />
-          </div>
-        </Container>
-      </div>
+      <FooterSocket />
     </footer>
   );
 };

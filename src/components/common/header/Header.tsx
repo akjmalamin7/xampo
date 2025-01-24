@@ -11,7 +11,7 @@ import Container from "../container";
 const Header = () => {
   return (
     <header>
-      <div className="header-section h-[60px] md:h-[70px] lg:h-[88px] flex items-center">
+      <div className="bg-customcolor-100 h-[60px] md:h-[70px] lg:h-[88px] flex items-center">
         <Container>
           <div className="header grid grid-cols-12">
             {/* @____# logo #______@ */}

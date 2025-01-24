@@ -7,10 +7,10 @@ import Container from "@/components/common/container";
 import Button from "@/shared/ui/button";
 import Card from "@/shared/ui/card";
 import GenericText from "@/shared/ui/genericText";
-
+// bg-customcolor-850
 const TrustedChoice = () => {
   return (
-    <section className="pt-[50px] md:pt-[70px] lg:pt-[0px]  xl:mt-[-115px] relative bg-customcolor-850 pb-[50px] md:pb-[70px] lg:pb-[90px] xl:pb-[147px]">
+    <section className="relative pt-[50px] md:pt-[70px] lg:pt-[0px]  xl:mt-[-115px] relative  pb-[50px] md:pb-[70px] lg:pb-[90px] xl:pb-[147px] ">
       <Container width="md">
         {/* milestones achieved */}
         <Card padding="xlg">

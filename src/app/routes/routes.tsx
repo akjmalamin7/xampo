@@ -26,17 +26,17 @@ export const router = createBrowserRouter([
 
   // Private Routes (Dashboard)
   {
-    path: "/dashboard",
+    path: "/",
     element: (
         <DashboardLayout />
     ),
     children: [
       {
-        path: "/dashboard/cart",
+        path: "/cart",
         element: <LazyCart />,
       },
       {
-        path: "/dashboard/packages",
+        path: "/packages",
         element: <LazyPackages />,
       },
       {

@@ -5,7 +5,7 @@ interface GenericTextProps{
   size?:"xsm"|"sm"|"md"|"lg"|"xlg"|"2xl"|"3xl"|"4xl"|"5xl"|"5xl"|"7xl"|"8xl"|"9xl"|"10xl"|"11xl"|"12xl"|"13xl";
   textAlign?:"start"|"center"|"end";
   lineHeight?:"xsm"|"sm"|"md"|"lg"|"xlg"|"2xl"|"3xl"|"4xl"|"5xl"|"5xl"|"7xl"|"8xl"|"9xl"|"10xl"|"11xl"|"12xl"|"13xl";
-  color?:"text-1"|"text-2"|"text-3"|"text-4"|"text-5"|"text-6"|"text-7";
+  color?:"text-1"|"text-2"|"text-3"|"text-4"|"text-5"|"text-6"|"text-7"|"text-8";
   fontWeight?:"regular"|"medium"|"semiBold"|"bold";
   textDecoration?:"underline"|"overline" |"line-through"|"none";
   className?:string;
@@ -38,6 +38,7 @@ const customTextColors: Record<string, string> = {
 "text-5":"text-customcolor-600",//#253642",
 "text-6":"text-customcolor-750",//"#0052CC",
 "text-7":"text-customcolor-950",//#00AF70",
+"text-8":"text-customcolor-650",//#1E266D",
 }
 const textDecorates:Record<string, string> ={
   "underline":"underline",

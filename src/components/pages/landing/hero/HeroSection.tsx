@@ -48,7 +48,7 @@ const HeroSection = () => {
           </div>
           <div className="col-span-full lg:col-span-5 2xl:col-span-6 flex items-end lg:items-center">
             <div className="flex justify-center w-[80%] lg:w-[90%] xl:w-[100%] mx-auto">
-              <img src={HERO_IMAGE} alt="Hero image" />
+              <img src={HERO_IMAGE} alt="Hero image" loading="lazy" />
             </div>
           </div>
         </div>

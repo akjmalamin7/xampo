@@ -6,71 +6,72 @@ interface Props {
 const FullPackagesIcon = ({ type, className }: Props) => {
   const roundIcon = (
     <svg
-      width="86"
-      height="86"
-      viewBox="0 0 86 86"
-      fill="none"
+      width="91"
+      height="87"
       className={className}
+      viewBox="0 0 91 87"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_b_1_4285)">
+      <circle cx="71" cy="20" r="20" fill="#0052CC" />
+      <g filter="url(#filter0_b_1_4282)">
         <path
-          d="M57.3333 14.405C69.2658 15.05 75.25 19.4575 75.25 35.8334V57.3334C75.25 71.6667 71.6667 78.8334 53.75 78.8334H32.25C14.3333 78.8334 10.75 71.6667 10.75 57.3334V35.8334C10.75 19.4934 16.7342 15.05 28.6667 14.405"
+          d="M57.3333 15.405C69.2658 16.05 75.25 20.4575 75.25 36.8334V58.3334C75.25 72.6667 71.6667 79.8334 53.75 79.8334H32.25C14.3333 79.8334 10.75 72.6667 10.75 58.3334V36.8334C10.75 20.4934 16.7342 16.05 28.6667 15.405"
           fill="white"
-          fillOpacity="0.3"
+          fill-opacity="0.3"
         />
         <path
-          d="M57.3333 14.405C69.2658 15.05 75.25 19.4575 75.25 35.8334V57.3334C75.25 71.6667 71.6667 78.8334 53.75 78.8334H32.25C14.3333 78.8334 10.75 71.6667 10.75 57.3334V35.8334C10.75 19.4934 16.7342 15.05 28.6667 14.405"
+          d="M57.3333 15.405C69.2658 16.05 75.25 20.4575 75.25 36.8334V58.3334C75.25 72.6667 71.6667 79.8334 53.75 79.8334H32.25C14.3333 79.8334 10.75 72.6667 10.75 58.3334V36.8334C10.75 20.4934 16.7342 16.05 28.6667 15.405"
           stroke="#253642"
-          strokeWidth="5"
-          strokeMiterlimit="10"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          stroke-width="5"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
         <path
-          d="M28.6665 43.7166H53.7498"
+          d="M28.6665 44.7166H53.7498"
           stroke="#253642"
-          strokeWidth="5"
-          strokeMiterlimit="10"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          stroke-width="5"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
         <path
-          d="M28.6665 58.05H44.3615"
+          d="M28.6665 59.05H44.3615"
           stroke="#253642"
-          strokeWidth="5"
-          strokeMiterlimit="10"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          stroke-width="5"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
         <path
-          d="M35.8332 21.5001H50.1665C57.3332 21.5001 57.3332 17.9167 57.3332 14.3334C57.3332 7.16675 53.7498 7.16675 50.1665 7.16675H35.8332C32.2498 7.16675 28.6665 7.16675 28.6665 14.3334C28.6665 21.5001 32.2498 21.5001 35.8332 21.5001Z"
+          d="M35.8332 22.5001H50.1665C57.3332 22.5001 57.3332 18.9167 57.3332 15.3334C57.3332 8.16675 53.7498 8.16675 50.1665 8.16675H35.8332C32.2498 8.16675 28.6665 8.16675 28.6665 15.3334C28.6665 22.5001 32.2498 22.5001 35.8332 22.5001Z"
           fill="white"
-          fillOpacity="0.3"
+          fill-opacity="0.3"
           stroke="#253642"
-          strokeWidth="5"
-          strokeMiterlimit="10"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          stroke-width="5"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
       </g>
       <defs>
         <filter
-          id="filter0_b_1_4285"
+          id="filter0_b_1_4282"
           x="-3.75"
-          y="-7.33423"
+          y="-6.33423"
           width="93.5"
           height="100.667"
           filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB"
+          color-interpolation-filters="sRGB"
         >
-          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="6" />
-          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_4285" />
+          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_4282" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_backgroundBlur_1_4285"
+            in2="effect1_backgroundBlur_1_4282"
             result="shape"
           />
         </filter>

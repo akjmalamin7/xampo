@@ -13,7 +13,7 @@ export default {
           200: "#e5eefa",
           250: "#DBE9FD",
           300: "#74788D",
-          350: "#74788D",
+          350: "#D9D9D9",
           400: "#74788D",
           450: "#516986",
           500: "#516986",
@@ -34,15 +34,6 @@ export default {
           1250: "#f1b44c",
         },
       },
-      space: {
-        ...Array.from({ length: 100 }, (_, i) => i + 1).reduce(
-          (acc, value) => ({
-            ...acc,
-            [`space-${value}`]: `${(value * 0.063).toFixed(3)}rem`,
-          }),
-          {}
-        ),
-      },
 
       fontSize: {
         12: "0.75rem", // 12px
@@ -56,10 +47,13 @@ export default {
         22: "1.375rem", // 22px
         24: "1.5rem", // 24px
         30: "1.875rem", // 30px
+        36: "2.25rem", // 36px
         32: "2rem", // 32px
         40: "2.5rem", // 40px
+        46: "2.875rem", // 46px
         48: "3rem", // 48px
         51: "3.1875rem", // 51px
+        60: "3.75rem", // 60px
         64: "4rem", // 64px
       },
       fontWeight: {
@@ -67,6 +61,9 @@ export default {
         medium: 500,    
         semiBold: 600,   
         bold: 700,    
+      },
+      boxShadow: {
+        'custom': '0px 10px 20px 0px #12263F08',
       },
     },
   },

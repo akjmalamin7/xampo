@@ -1,8 +1,44 @@
-
-const Card = () => {
-  return (
-    <div>Card</div>
-  )
+interface CardProps {
+  children?: React.ReactNode;
+  padding?: "xs" | "sm" | "md" | "lg" | "xlg"|"2xl" |"none";
+  bgColor?: "primary" | "white";
+  radius?: "sm" | "md";
+  className?:string;
+  cardStyle?:"border"|"shadow"
 }
 
-export default Card
+const cardStyles:Record<string, string> ={
+  border:"border border-[#E5E5F0]",
+  shadow:"shadow-custom"
+}
+const paddings: Record<string, string> = {
+  none: "px-0 py-0",
+  xs: "px-[20px] py-[12px]",
+  sm: "px-[24px] py-[24px]",
+  md: "px-[53px] py-[46px]",
+  lg: "px-[48px] py-[48px]",
+  xlg: "px-[76px] py-[68px]",
+  "2xl": "px-[48px] py-[48px]",
+};
+const bgColors: Record<string, string> = {
+  primary: "bg-customcolor-750",
+  white: "bg-customcolor-100",
+};
+const radiuses: Record<string, string> = {
+  sm: "rounded-[8px]",
+  md: "rounded-[24px]",
+};
+const Card = ({ cardStyle="shadow",padding = "md", bgColor = "white", radius = "md",className, children }: CardProps) => {
+  const cardPaddings = paddings[padding] || "";
+  const cardBgColors = bgColors[bgColor] || "";
+  const cardRadius = radiuses[radius] || "";
+  const customCardStyles = cardStyles[cardStyle] || ""
+  const finalClassName = `${customCardStyles} ${cardPaddings} ${cardBgColors} ${cardRadius} ${className} `;
+  return (
+    <div className={finalClassName}>
+      <div>{children}</div>
+    </div>
+  );
+};
+
+export default Card;

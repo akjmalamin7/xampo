@@ -57,8 +57,8 @@ const Button: React.FC<ButtonProps> = ({
     "size-4": "h-[44px] px-[20px] text-[16px] font-regular",
     "size-5": "h-[50px] px-[40px] text-[14px] font-regular",
     "size-6": "h-[58px] px-[30px] text-[16px] font-semiBold",
-    "size-7": "h-[64px] px-[40px] text-[16px] font-semiBold",
-    "size-8": "h-[68px] px-[40px] text-[16px]",
+    "size-7": "h-[50px] lg:h-[64px] px-[30px] lg:px-[40px] text-14 md:text-[16px] font-semiBold",
+    "size-8": " h-[68px] px-[40px] text-[16px]",
   }[size];
 
   // width-specific classes

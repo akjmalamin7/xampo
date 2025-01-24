@@ -5,13 +5,15 @@ import Button from "@/shared/ui/button";
 import GenericText from "@/shared/ui/genericText";
 import { Link } from "react-router-dom";
 const HeroSection = () => {
+  // pt-[50px] lg:pt-[133px] pb-[50px] lg:pb-[172px]
   return (
-    <div className="bg-customcolor-750 pt-[50px] lg:pt-[133px] pb-[50px] lg:pb-[172px]">
-      <Container>
-        <div className="grid grid-cols-12 gap-[87px] ">
+    <div className="
+    bg-customcolor-750 pt-[50px] lg:pt-[133px] lg:pb-[10px]">
+      <Container width="md">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-[87px] ">
           <div className="col-span-full lg:col-span-6 lg:pr-[15px]">
             <div>
-              <GenericText elementType="h1" size="13xl" fontWeight="semiBold">
+              <GenericText color="text-1" elementType="h1" size="13xl" fontWeight="semiBold">
                 Complete your <span className="">IELTS</span> preparation at home.
               </GenericText>
             </div>
@@ -21,7 +23,7 @@ const HeroSection = () => {
                 to score your destined one.
               </GenericText>
             </div>
-            <div className="mt-[36px] flex items-center gap-[32px]">
+            <div className="mt-[36px] flex flex-col md:flex-row md:items-center gap-[32px]">
               <div>
                 <Button variant="white" size="size-7" customClass="rounded-[14px]">
                   Start Free Pack
@@ -31,21 +33,21 @@ const HeroSection = () => {
                 <Button type="text" customClass="pr-0 pl-0">
                   <PlayIcon />
                 </Button>
-                <GenericText size="lg" fontWeight="semiBold" textDecoration="underline">
+                <GenericText color="text-2" size="lg" fontWeight="semiBold" textDecoration="underline">
                   <Link to={"#"}>See how it’s work</Link>
                 </GenericText>
               </div>
             </div>
           </div>
           <div className="col-span-full lg:col-span-6">
-            <div>
+            <div className="flex justify-center">
               <img src={HERO_IMAGE} alt="Hero image" />
             </div>
           </div>
         </div>
         <div>
-          
         </div>
+     
       </Container>
     </div>
   );

@@ -14,9 +14,9 @@ const responsiveSizes: Record<string, string> = {
   xsm: "text-12",
   sm: "text-13",
   md: "text-14",
-  lg: "text-16",
+  lg: "text-14 md:text-16",
   xlg: "text-18",
-  "2xl": "text-20",
+  "2xl": "text-18 md:text-20",
   "3xl": "text-22",
   "4xl": "text-24",
   "5xl": "text-30",
@@ -27,7 +27,7 @@ const responsiveSizes: Record<string, string> = {
   "10xl": "text-51",
   "11xl": "text-51",
   "12xl": "text-60",
-  "13xl": "text-64",
+  "13xl": "text-30 md:text-60 lg:text-64",
 };
 const customTextColors: Record<string, string> = {
 "text-1":"text-customcolor-100",//"#ffffff",
@@ -58,7 +58,7 @@ const GenericText: React.FC<GenericTextProps> = ({
   textAlign = "start",
   lineHeight = "leading-normal",
   textDecoration="none",
-  color = "text-1",
+  color = "text-3",
   fontWeight = "regular",
 }) => {
   const Component = elementType;

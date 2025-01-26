@@ -9,13 +9,13 @@ interface CardProps {
 
 const cardStyles:Record<string, string> ={
   border:"border border-[#E5E5F0]",
-  shadow:"shadow-custom"
+  shadow:"shadow-custom-1"
 }
 const paddings: Record<string, string> = {
   none: "px-0 py-0",
   xs: "px-[20px] py-[12px]",
   sm: "px-[24px] py-[24px]",
-  md: "px-[53px] py-[46px]",
+  md: "px-[20px] py-[20px] lg:px-[53px] lg:py-[46px]",
   lg: "px-[48px] py-[48px]",
   xlg: "px-[25px] lg:px-[76px] py-[25px] md:py-[68px]",
   "2xl": "px-[48px] py-[48px]",
@@ -36,7 +36,7 @@ const Card = ({ cardStyle="shadow",padding="none", bgColor = "white", radius = "
   const finalClassName = `${customCardStyles} ${cardPaddings} ${cardBgColors} ${cardRadius} ${className} `;
   return (
     <div className={finalClassName}>
-      <div>{children}</div>
+      <div className="h-[100%]">{children}</div>
     </div>
   );
 };

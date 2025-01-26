@@ -63,7 +63,9 @@ export default {
         bold: 700,    
       },
       boxShadow: {
-        'custom': '0px 10px 20px 0px #12263F08',
+        'custom-1': '0px 10px 20px 0px #12263F08',
+        'custom-2': '0px 12px 24px 0px #12263F08'
+
       },
       textAlign: {
         left: "left",

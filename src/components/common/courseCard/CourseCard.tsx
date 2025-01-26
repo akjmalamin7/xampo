@@ -8,17 +8,29 @@ import Button from "@/shared/ui/button";
 import Card from "@/shared/ui/card";
 import GenericText from "@/shared/ui/genericText";
 interface CourseCardProps{
-  column?:string;
+  isCountDown?:boolean;
 }
-const CourseCard = ({column}:CourseCardProps) => {
+const CourseCard = ({isCountDown=true}:CourseCardProps) => {
   return (
-    <Card className={`px-[18px] py-[16px] ${column}`}>
+    <Card className={`px-[18px] py-[16px] `}>
       {/* @____# image #______@ */}
       <div className="w-100 relative">
         <img src={IMG} alt="Course image" className="w-full" />
         <Button type="text" customClass="pl-0 pr-0 absolute right-[12px] top-[12px] bg-white p-[4px] md:p-[5px] xl:p-[8px]">
           <BookMarkIcon/>
         </Button>
+        {/*  @_____# offer #____@*/}
+        {
+          isCountDown && <div className="absolute flex items-center gap-[3px] bg-customcolor-100 border border-[#0052cc99] px-[13px] rounded-[4px] left-[50%] transform -translate-x-1/2 bottom-[10px]">
+            <GenericText size="xsm" fontWeight="semiBold" color="text-4">30D</GenericText>
+            :
+            <GenericText size="xsm" fontWeight="semiBold" color="text-4">24H</GenericText>
+            :
+            <GenericText size="xsm" fontWeight="semiBold" color="text-4">58M</GenericText>
+            :
+            <GenericText size="xsm" fontWeight="semiBold" color="text-4">56S</GenericText>
+          </div>
+        }
       </div>
       {/* @____# course information #______@ */}
       <div className="w-100 mt-[12px] xl:mt-[33px]  pb-[10px]">

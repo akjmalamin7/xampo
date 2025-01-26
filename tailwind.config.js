@@ -65,9 +65,15 @@ export default {
       boxShadow: {
         'custom': '0px 10px 20px 0px #12263F08',
       },
+      textAlign: {
+        left: "left",
+        right: "right",
+        center: "center",
+      },
       screens: {
         'xs': '440px',
       },
+
     },
   },
   plugins: [],

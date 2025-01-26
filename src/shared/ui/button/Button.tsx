@@ -54,7 +54,7 @@ const Button: React.FC<ButtonProps> = ({
     "size-1": "h-[36px] px-[16px] text-[16px] font-regular",
     "size-2": "h-[40px] px-[12px] text-[14px] font-regular",
     "size-3": "h-[40px] px-[16px] text-[16px] font-regular",
-    "size-4": "h-[44px] px-[20px] text-[16px] font-regular",
+    "size-4": "h-[40px] lg:h-[44px] px-[20px] text-[16px] font-regular",
     "size-5": "h-[50px] px-[40px] text-[14px] font-regular",
     "size-6": "h-[40px] xl:h-[58px] px-[30px]  text-13 xl:text-[16px] font-semiBold rounded-[14px]",
     "size-7": "h-[45px] lg:h-[64px] px-[30px] lg:px-[40px] text-14 md:text-[16px] font-semiBold",

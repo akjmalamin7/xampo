@@ -58,7 +58,7 @@ const responsiveSizes: Record<string, string> = {
   "6xl": "text-32",
   "7xl": "text-36",
   "8xl": "text-40",
-  "9xl": "text-48",
+  "9xl": "text-[26px] xl:text-48",
   "10xl": "text-30 lg:text-40 xl:text-51",
   "11xl": " text-[28px] lg:text-51 ",
   "12xl": "text-30 lg:text-60",

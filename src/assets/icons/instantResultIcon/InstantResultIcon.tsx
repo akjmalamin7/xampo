@@ -5,7 +5,7 @@ const InstantResultIcon = ({className}:Props) => {
   return (
 <svg width="97" height="99" className={className} viewBox="0 0 97 99" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="72" cy="25" r="25" fill="#0052CC"/>
-<g clip-path="url(#clip0_1_3841)">
+<g clipPath="url(#clip0_1_3841)">
 <g filter="url(#filter0_b_1_3841)">
 <path d="M23 35.5L34 26.5L47.5 23L58.5 26.5L66 32.5L71 51L61 75L62 91.5L45.5 97.5L30.5 89.5L21.5 49.5L23 35.5Z" fill="url(#paint0_linear_1_3841)" fill-opacity="0.2"/>
 </g>

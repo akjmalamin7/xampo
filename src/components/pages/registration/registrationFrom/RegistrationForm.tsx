@@ -1,5 +1,6 @@
 import ArrowIcon from "@/assets/icons/arrowIcon/ArrowIcon";
-import { UserSchema } from "@/redux/features/auth/auth.schema";
+import { REGISTRATION_SCHEMA } from "@/redux/features/auth/auth.schema";
+import { UserSchema } from "@/redux/features/auth/auth.types";
 import { useRegistrationMutation } from "@/redux/features/auth/authApi";
 import Button from "@/shared/ui/button";
 import GenericText from "@/shared/ui/genericText";
@@ -7,7 +8,6 @@ import Input from "@/shared/ui/Input";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import { REGISTRATION_SCHEMA } from "./registration.schema";
 
 
 
@@ -16,7 +16,8 @@ const RegistrationForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors,isValid },
+    watch,
   } = useForm<UserSchema>({
     resolver: yupResolver(REGISTRATION_SCHEMA),
     defaultValues: {
@@ -26,6 +27,7 @@ const RegistrationForm = () => {
       password: "",
       confirmPassword: "",
     },
+    mode: "onChange",
   });
   const [registration, { isLoading }] = useRegistrationMutation();
   const onSubmit: SubmitHandler<UserSchema> = async (data) => {
@@ -36,7 +38,10 @@ const RegistrationForm = () => {
       console.error("Registration failed:", err);
     }
   };
+  const password = watch("password");
+  const confirmPassword = watch("confirmPassword");
 
+  const isPasswordValid = password === confirmPassword;
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="flex flex-col gap-[12px] lg:gap-[16px] mt-[20px]">
@@ -83,8 +88,9 @@ const RegistrationForm = () => {
           variant="primary"
           width="full"
           loading={isLoading}
+          disabled={!isValid || !isPasswordValid}
         >
-          {isLoading ? "Submitting..." : "Registration"} <ArrowIcon size="line" color="white" />
+          Registration <ArrowIcon size="line" color="white" />
         </Button>
       </div>
     </form>

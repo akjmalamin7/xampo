@@ -1,4 +1,5 @@
-import { apiSlice } from "../api/apiSlice";
+import { apiSlice } from "@/redux/features/api/apiSlice";
+import { userLoggedIn } from "@/redux/features/auth/authSlice";
 
 export const authApi = apiSlice.injectEndpoints({
   endpoints:(builder)=>({
@@ -17,25 +18,21 @@ export const authApi = apiSlice.injectEndpoints({
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
-          // API কল সফল হলে `queryFulfilled` থেকে ডেটা পাওয়া যাবে
           const result = await queryFulfilled;
-      
-          // API থেকে প্রাপ্ত টোকেন ও ব্যবহারকারীর তথ্য লোকাল স্টোরেজে সেভ করা
+          console.log(result)
           localStorage.setItem(
             "auth",
             JSON.stringify({
-              token: result?.data?.data?.token, // টোকেন
-              user: result?.data?.data?.data,  // ব্যবহারকারীর তথ্য
+              token: result?.data?.token,
+              user: result?.data?.UserLogin?.data, 
             })
           );
-      
-          // Redux state এ টোকেন ও ব্যবহারকারীর তথ্য আপডেট করা
-          // dispatch(
-          //   userLoggedIn({
-          //     token: result.data.data.token,
-          //     user: result.data.data.data,
-          //   })
-          // );
+          dispatch(
+            userLoggedIn({
+              token: result?.data?.token,
+              user: result?.data?.UserLogin?.data, 
+            })
+          );
         } catch (err) {
           console.log(err);
         }
@@ -43,4 +40,4 @@ export const authApi = apiSlice.injectEndpoints({
     })
   })
 })
-export const {useRegistrationMutation} = authApi
+export const {useRegistrationMutation, useLoginMutation} = authApi

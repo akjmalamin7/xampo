@@ -2,7 +2,7 @@ const SpeakerIcon = () => {
   return (
     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="15" cy="15" r="14.5" fill="white" stroke="#5990FF" />
-      <g clip-path="url(#clip0_1_1908)">
+      <g clipPath="url(#clip0_1_1908)">
         <path
           d="M15.0004 17.9166C13.5765 17.9166 12.418 16.7581 12.418 15.3341V11.6883C12.418 10.2643 13.5765 9.10583 15.0004 9.10583C16.4244 9.10583 17.5829 10.2643 17.5829 11.6883V15.3341C17.5829 16.7581 16.4244 17.9166 15.0004 17.9166Z"
           fill="#0052CC"

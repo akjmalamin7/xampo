@@ -9,6 +9,7 @@ const Input = ({
   placeholder,
   size = "md",
   isLoading = false,
+  className,
   onChange,
   onInput,
   onBlur,
@@ -16,16 +17,17 @@ const Input = ({
   onClear,
   onKeyDown,
 }: InputProps) => {
+
   return (
-    <div className={`input-wrapper input-size-${size}`}>
+    <div >
       {label && (
-        <GenericText>
+        <GenericText className="mb-[14px]">
           <label>{label}</label>
         </GenericText>
       )}
-      <div className="input-container">
+      <div className={`${size}`}>
         <input
-        className="h-[40px] border border-[#74788D] rounded-[4px] w-full px-[15px] text-[#74788D] text-14 outline-none mt-[12px]"
+        className={`h-[40px] border border-[#74788D] rounded-[4px] w-full px-[15px] text-[#74788D] text-14 outline-none ${className}`}
           id={name}
           name={name}
           value={value}

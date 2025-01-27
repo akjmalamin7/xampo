@@ -13,6 +13,7 @@ export interface InputProps{
   placeholder?:string;
   size?: "sm" | "md" | "lg";
   isLoading?: boolean;
+  className?:string;
   
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   onInput?: (event: React.FormEvent<HTMLInputElement>) => void;

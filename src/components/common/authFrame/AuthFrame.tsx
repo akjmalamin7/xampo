@@ -4,7 +4,7 @@ import LOGO from "@/assets/images/logo.png";
 import Button from "@/shared/ui/button";
 import GenericText from "@/shared/ui/genericText";
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 type ActiveFormType = "login" | "registration";
 interface AuthFrameProps {
   formTitle?: string;
@@ -80,7 +80,7 @@ const AuthFrame = ({ formTitle, children }: AuthFrameProps) => {
         </div>
         <div>
           {/* title */}
-          <div className="mt-[20px]">
+          <div className="mt-[20px] lg:mt-[30px]">
             <GenericText elementType="h1" size="9xl" color="text-5" fontWeight="bold">
               {formTitle}
             </GenericText>
@@ -88,14 +88,37 @@ const AuthFrame = ({ formTitle, children }: AuthFrameProps) => {
           {/* Children */}
           {children}
         </div>
+        <div>
+        <div className="flex flex-col items-center mt-[16px] lg:mt-[30px] mb-[16px] lg:mb-[20px] gap-[8px]">
+          <GenericText size="md" fontWeight="regular" color="text-5">
+          Need to create a account? <Link className="text-customcolor-750" to={activeForm === "login" ?"/registration":"/login"}>{activeForm === 'login'?"Sign Up":"Sign in"}</Link>
+          </GenericText>
+        <GenericText size="md" fontWeight="regular" className="text-[#4E4B66]" textAlign="center" >Or</GenericText>
+        </div>
+        </div>
         <div className="flex flex-col md:flex-row  gap-[12px] md:gap-[28px]">
-          <Button type="outline" variant="secondary" width="full">
+          <Button
+            type="outline"
+            variant="secondary"
+            width="full"
+            customClass="border border-[#D0D5DD] font-regular"
+          >
             <GoogleIcon />
-            Google
+            <GenericText size="md" fontWeight="regular">
+              Google
+            </GenericText>
           </Button>
-          <Button type="outline" variant="secondary" width="full">
+          <Button
+            type="outline"
+            variant="secondary"
+            width="full"
+            customClass="border border-[#D0D5DD] font-regular rounded-[]"
+            
+          >
             <FacebookIcon />
-            Facebook
+            <GenericText size="md" fontWeight="regular" color="text-6">
+              Facebook
+            </GenericText>
           </Button>
         </div>
       </div>

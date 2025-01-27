@@ -5,7 +5,7 @@ import GenericText from "@/shared/ui/genericText";
 import Input from "@/shared/ui/Input";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { REGISTRATION_SCHEMA } from "./registration.schema";
 
 interface RegistrationFormInputs {
@@ -17,6 +17,7 @@ interface RegistrationFormInputs {
 }
 
 const RegistrationForm = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -35,6 +36,7 @@ const RegistrationForm = () => {
   const onSubmit: SubmitHandler<RegistrationFormInputs> = async (data) => {
     try {
       await registration(data).unwrap();
+      navigate("/login");
     } catch (err) {
       console.error("Registration failed:", err);
     }

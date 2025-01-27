@@ -5,11 +5,11 @@ export interface UserSchema {
   password: string;
   confirmPassword: string;
 }
-interface AuthState {
+export interface AuthState {
   token: string | null;
   user: UserSchema | null;
 }
 export const AUTH_INITIAL_STATE: AuthState = {
   token: null,
-  user: null
+  user: {} as UserSchema
 };

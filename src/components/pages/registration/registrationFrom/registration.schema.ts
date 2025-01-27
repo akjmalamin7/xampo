@@ -1,0 +1,1 @@
+export REGISTRATION_SCHEAM = shape()

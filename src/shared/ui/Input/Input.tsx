@@ -7,7 +7,6 @@ const Input = ({
   value,
   type = "text",
   placeholder,
-  size = "md",
   isLoading = false,
   className,
   onChange,
@@ -19,15 +18,15 @@ const Input = ({
 }: InputProps) => {
 
   return (
-    <div >
+    <div className="w-full" >
       {label && (
         <GenericText className="mb-[14px]">
           <label>{label}</label>
         </GenericText>
       )}
-      <div className={`${size}`}>
+      <div className="w-full">
         <input
-        className={`h-[40px] border border-[#74788D] rounded-[4px] w-full px-[15px] text-[#74788D] text-14 outline-none ${className}`}
+        className={`h-[40px] xl:h-[50px] border border-[#74788D] rounded-[4px] w-full px-[15px] text-[#74788D] text-14 outline-none ${className}`}
           id={name}
           name={name}
           value={value}

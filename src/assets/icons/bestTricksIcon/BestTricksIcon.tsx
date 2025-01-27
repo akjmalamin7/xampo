@@ -14,9 +14,9 @@ const BestTricksIcon = ({ className }: Props) => {
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6668 14.3332 80.8334 32.2498 80.8334H46.5832"
           stroke="#253642"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6667 14.3332 80.8334 32.2498 80.8334H46.5832"
@@ -26,9 +26,9 @@ const BestTricksIcon = ({ className }: Props) => {
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6668 14.3332 80.8334 32.2498 80.8334H46.5832"
           stroke="#253642"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6667 14.3332 80.8334 32.2498 80.8334H46.5832"
@@ -38,9 +38,9 @@ const BestTricksIcon = ({ className }: Props) => {
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6668 14.3332 80.8334 32.2498 80.8334H46.5832"
           stroke="#253642"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M57.3335 71.6242L62.9952 77.2501L75.2502 62.9167"
@@ -50,30 +50,30 @@ const BestTricksIcon = ({ className }: Props) => {
         <path
           d="M57.3335 71.6242L62.9952 77.2501L75.2502 62.9167"
           stroke="#253642"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M25.0835 39.625V50.375"
           stroke="#253642"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M43 39.625V50.375"
           stroke="#253642"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M60.9165 39.625V50.375"
           stroke="#253642"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>

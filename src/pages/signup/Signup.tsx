@@ -1,12 +1,8 @@
-
 import AuthBanner from "@/components/common/authBanner";
 import AuthFrame from "@/components/common/authFrame";
-
-
+import RegistrationForm from "@/components/pages/registration/registrationFrom";
 
 const Signup = () => {
-
-
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 h-screen">
       {/* Left Side with Auth Banner */}
@@ -15,9 +11,9 @@ const Signup = () => {
       </div>
 
       {/* Right Side */}
-    <AuthFrame formTitle="Registration">
-      Registration
-    </AuthFrame>
+      <AuthFrame formTitle="Registration">
+        <RegistrationForm />
+      </AuthFrame>
     </div>
   );
 };

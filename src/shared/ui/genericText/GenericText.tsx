@@ -98,15 +98,13 @@ const GenericText: React.FC<GenericTextProps> = ({
   color = "text-3",
   fontWeight = "regular",
 }) => {
-  console.log("Passed textAlign:", textAlign); // Debugging textAlign value
+
   const Component = elementType;
   const responsiveClass = responsiveSizes[size] || "";
   const textCustomColors = customTextColors[color] || "";
   const weightClass = fontWeights[fontWeight] || "";
   const textDecorate = textDecorates[textDecoration] || "";
   const finalClasses = `${responsiveClass || ""} ${weightClass || ""} text-${textAlign} ${lineHeight || ""} ${textCustomColors|| ""} ${textDecorate || ""} ${className}`;
-  // console.log("Final classes:", finalClasses); // Debugging alignment
-
   return <Component className={finalClasses}>{children}</Component>;
 };
 

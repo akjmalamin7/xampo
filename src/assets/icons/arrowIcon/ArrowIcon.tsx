@@ -103,18 +103,18 @@ switch (color) {
           <path
             d="M23 4L27.075 8.075L23 12.15"
             stroke={strokeColor}
-            stroke-width="2"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M1 8.05261H25.29"
             stroke={strokeColor}
-            stroke-width="2"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       );

@@ -42,17 +42,17 @@ const RegistrationForm = () => {
       <div className="flex flex-col gap-[12px] lg:gap-[16px] mt-[20px]">
         <div>
           <Input {...register("fullName")} className="border-[#D6D6D6]" placeholder="Name" />
-          {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName.message}</p>}
+          {errors.fullName && <GenericText size="xsm" className="text-red-500">{errors.fullName.message}</GenericText>}
         </div>
         <div>
           <Input {...register("phoneNumber")} className="border-[#D6D6D6]" placeholder="Phone" />
           {errors.phoneNumber && (
-            <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>
+           <GenericText size="xsm" className="text-red-500">{errors.phoneNumber.message}</GenericText>
           )}
         </div>
         <div>
           <Input {...register("email")} className="border-[#D6D6D6]" placeholder="Email" />
-          {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+          {errors.email && <GenericText size="xsm" className="text-red-500">{errors.email.message}</GenericText>}
         </div>
         <div>
           <Input
@@ -61,7 +61,7 @@ const RegistrationForm = () => {
             className="border-[#D6D6D6]"
             placeholder="Password"
           />
-          {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
+          {errors.password && <GenericText size="xsm" className="text-red-500">{errors.password.message}</GenericText>}
         </div>
         <div>
           <Input
@@ -71,7 +71,7 @@ const RegistrationForm = () => {
             placeholder="Confirm Password"
           />
           {errors.confirmPassword && (
-            <p className="text-red-500 text-sm">{errors.confirmPassword.message}</p>
+            <GenericText size="xsm" className="text-red-500">{errors.confirmPassword.message}</GenericText>
           )}
         </div>
         <GenericText className="text-md text-[#4E4B66]">

@@ -8,12 +8,14 @@ interface ButtonProps {
   disabled?: boolean;
   width?: "auto" | "full";
   customClass?: string;
+  buttonType?:"submit"|"button";
   children?: React.ReactNode;
   onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
   type = "normal",
+  buttonType="button",
   variant = "primary",
   size = "size-3",
   loading = false,
@@ -79,6 +81,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={!disabled && !loading ? onClick : undefined}
       disabled={loading || disabled}
       className={finalClass}
+      type={buttonType}
     >
       {loading ? "Loading..." : children}
     </button>

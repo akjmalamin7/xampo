@@ -1,4 +1,5 @@
 import ArrowIcon from "@/assets/icons/arrowIcon/ArrowIcon";
+import { UserSchema } from "@/redux/features/auth/auth.schema";
 import { useRegistrationMutation } from "@/redux/features/auth/authApi";
 import Button from "@/shared/ui/button";
 import GenericText from "@/shared/ui/genericText";
@@ -8,13 +9,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { REGISTRATION_SCHEMA } from "./registration.schema";
 
-interface RegistrationFormInputs {
-  fullName: string;
-  phoneNumber: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-}
+
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
@@ -22,7 +17,7 @@ const RegistrationForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<RegistrationFormInputs>({
+  } = useForm<UserSchema>({
     resolver: yupResolver(REGISTRATION_SCHEMA),
     defaultValues: {
       fullName: "",
@@ -33,7 +28,7 @@ const RegistrationForm = () => {
     },
   });
   const [registration, { isLoading }] = useRegistrationMutation();
-  const onSubmit: SubmitHandler<RegistrationFormInputs> = async (data) => {
+  const onSubmit: SubmitHandler<UserSchema> = async (data) => {
     try {
       await registration(data).unwrap();
       navigate("/login");

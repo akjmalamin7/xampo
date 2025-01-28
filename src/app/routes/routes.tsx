@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
         element: <LazyPackages />,
       },
       {
-        path: "/create-package",
+        path: "/packages/create",
         element: <LazyCreatePackage />,
       },
     ],

@@ -3,14 +3,14 @@ import Container from "@/components/common/container";
 import CourseCard from "@/components/common/courseCard";
 import { PopularCoursesModels } from "@/components/common/courseCard/popularCourses.models";
 import LandingSectionTitle from "@/components/common/landingSectionTitle";
-import { usePackagesQuery } from "@/redux/features/packages/packagesApi";
+import { useGetPackagesQuery } from "@/redux/features/packages/packagesApi";
 import Button from "@/shared/ui/button";
 import DataNotFound from "@/shared/ui/dataNotFound";
 import ErrorMessage from "@/shared/ui/errorMessage";
 import GenericText from "@/shared/ui/genericText";
 import Loader from "@/shared/ui/loader";
 const PopularCourses = () => {
-  const { data, error, isLoading } = usePackagesQuery(undefined);
+  const { data, error, isLoading } = useGetPackagesQuery(undefined);
   let content = null;
   if (isLoading) {
     content = <Loader />;

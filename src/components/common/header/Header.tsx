@@ -3,12 +3,22 @@ import CartIcon from "@/assets/icons/cartIcon";
 import HamburgerIcon from "@/assets/icons/hamburgerIcon";
 import AVATAR_IMG from "@/assets/images/avatar.png";
 import IMG from "@/assets/images/logo.png";
+import { RootState } from "@/redux/stores/store";
 import Avatar from "@/shared/ui/avatar";
 import Button from "@/shared/ui/button";
 import GenericText from "@/shared/ui/genericText";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Container from "../container";
 const Header = () => {
+  const user = useSelector((state: RootState) => state?.auth.user);
+
+  const parseAuth = JSON.parse(localStorage.getItem("auth") as string || "{}");
+  const getUserFromLocalStorage = parseAuth?.user;
+
+  const userName = user?.fullName || getUserFromLocalStorage?.fullName || "";
+
+  
   return (
     <header>
       <div className="bg-customcolor-100 h-[60px] md:h-[70px] lg:h-[88px] flex items-center">
@@ -63,7 +73,7 @@ const Header = () => {
               </div>
               {/* @____# Avatar #______@ */}
               <div className="hidden lg:block h-[30px] lg:h-[40px] pl-[24px] border-l-2 border-l-customcolor-250">
-                <Avatar name="Esther" url={AVATAR_IMG} />
+              <Avatar name={userName.split(" ")[0]} url={AVATAR_IMG} />
               </div>
             </div>
           </div>

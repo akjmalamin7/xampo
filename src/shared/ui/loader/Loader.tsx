@@ -1,6 +1,6 @@
 const Loader = () => {
   return (
-    <div className="flex">
+    <div className="flex absolute left-[50%] top-[50%]">
       <div className="relative">
         <div
           className="w-12 h-12 rounded-full absolute

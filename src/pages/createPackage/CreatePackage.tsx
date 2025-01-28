@@ -46,7 +46,7 @@ const CreatePackage = () => {
                 List of the sevice
               </GenericText>
             </div>
-            <div className="w-full grid grid-cols-1 gap-[12px] xl:gap-[16px]">{content}</div>
+            <div className="w-full grid grid-cols-1 gap-[12px] xl:gap-[16px] relative">{content}</div>
             <div className="bg-customcolor-750 rounded-[8px] mt-[40px] xl:mt-[80px]">
               <img src={SERVICE_BANNER} alt="service banner" className="w-full" />
             </div>

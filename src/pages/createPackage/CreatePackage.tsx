@@ -4,12 +4,30 @@ import Container from "@/components/common/container";
 import EmptyFormate from "@/components/common/emptyFormate";
 import PageHeader from "@/components/common/pageHeader";
 import ServiceItem from "@/components/common/serviceItem";
+import PackageNameType from "@/components/pages/createPackage/packageNameType";
+import { useGetServicesQuery } from "@/redux/features/services/servicesApi";
 import Button from "@/shared/ui/button";
 import Card from "@/shared/ui/card";
+import DataNotFound from "@/shared/ui/dataNotFound";
+import ErrorMessage from "@/shared/ui/errorMessage";
 import GenericText from "@/shared/ui/genericText";
-import Input from "@/shared/ui/Input";
-import Select from "@/shared/ui/select";
+import Loader from "@/shared/ui/loader";
+import { CreatePackageModels } from "./createPackage.models";
 const CreatePackage = () => {
+  const { data, error, isLoading } = useGetServicesQuery(undefined);
+  let content = null;
+  if (isLoading) {
+    content = <Loader />;
+  } else if (error) {
+    content = <ErrorMessage message={"Error occur"}/>;
+  } else if (data?.getDatas?.length === 0) {
+    content = <DataNotFound />;
+  } else if (data?.getDatas?.length > 0) {
+    content = data?.getDatas.map((item:CreatePackageModels) => (
+      <ServiceItem key={item._id} icon={ICON} services={item} />
+    ));
+  }
+  // console.log(data)
   return (
     <section>
       <Container width="md">
@@ -19,12 +37,8 @@ const CreatePackage = () => {
             <GenericText color="text-6">Active Course </GenericText>
           </Button>
         </PageHeader>
-        <Card className="px-[20px] py-[20px] mb-[25px]" radius="sm">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[16px] lg:gap-[25px]">
-            <Input label="Package name" />
-            <Select label="Course type" options={[{ name: "Akjm", value: "Al Amin" }]} />
-          </div>
-        </Card>
+        {/* @____# package name andtype #____@ */}
+        <PackageNameType />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[25px] mb-[44px]">
           <Card padding="md" radius="sm">
             <div className="mb-[24px]">
@@ -32,11 +46,7 @@ const CreatePackage = () => {
                 List of the sevice
               </GenericText>
             </div>
-            <div className="w-full grid grid-cols-1 gap-[12px] xl:gap-[16px]">
-              <ServiceItem icon={ICON} title="Reading" price="300" />
-              <ServiceItem icon={ICON} title="Reading" price="300" />
-              <ServiceItem icon={ICON} title="Reading" price="300" />
-            </div>
+            <div className="w-full grid grid-cols-1 gap-[12px] xl:gap-[16px]">{content}</div>
             <div className="bg-customcolor-750 rounded-[8px] mt-[40px] xl:mt-[80px]">
               <img src={SERVICE_BANNER} alt="service banner" className="w-full" />
             </div>

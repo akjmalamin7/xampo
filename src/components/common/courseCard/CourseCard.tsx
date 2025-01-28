@@ -15,7 +15,7 @@ const CourseCard = ({isCountDown=true,courses}:CourseCardProps) => {
     <Card className={`px-[18px] py-[16px] `}>
       {/* @____# image #______@ */}
       <div className="w-100 relative">
-        <img src={courses.photo} alt="Course image" className="w-full" />
+        <img src={courses?.photo} alt="Course image" className="w-full" />
         <Button type="text" customClass="pl-0 pr-0 absolute right-[12px] top-[12px] bg-white p-[4px] md:p-[5px] xl:p-[8px]">
           <BookMarkIcon/>
         </Button>
@@ -38,29 +38,29 @@ const CourseCard = ({isCountDown=true,courses}:CourseCardProps) => {
         <div className="flex justify-between">
           <div className="flex items-center gap-x-[2px] ">
             {
-              Array(5).fill(0).map((_,i)=>  <StarIcon key={i} className="w-[14px] md:w-[16px]" color={i < parseInt(courses.aveRatings || "0") ? "yellow" : "gray"}  />)
+              Array(5).fill(0).map((_,i)=>  <StarIcon key={i} className="w-[14px] md:w-[16px]" color={i < parseInt(courses?.aveRatings || "0") ? "yellow" : "gray"}  />)
             }
             <GenericText elementType="span" className="ml-[3px] text-[11px] md:text-[12px]">
-            {courses.aveRatings || "0.0"} ({courses.ratingNumber || "0"})
+            {courses?.aveRatings || "0.0"} ({courses?.ratingNumber || "0"})
             </GenericText>
           </div>
           <div className="bg-customcolor-1150 rounded-[30px] flex items-center px-[10px] py-[0px] gap-x-[3px]">
             <ClockIcon className="w-[12px] xs:w-[14px]" color="primary" />
             <GenericText fontWeight="regular" color="text-6" className="text-[11px] md:text-[12px] lg:text-[14px]">
-              {courses.validity}
+              {courses?.validity}
             </GenericText>
           </div>
         </div>
         {/* @____# title #______@ */}
         <div className="flex flex-col gap-y-[8px] xl:gap-y-[14px] xs:mt-[10px] xl:mt-[22px]">
           <GenericText size="2xl" fontWeight="semiBold" color="text-5">
-            {courses.packageName || ""}
+            {courses?.packageName || ""}
           </GenericText>
          
           <div className="flex items-center gap-x-[14px]">
             <HandWriteIcon />
             <GenericText size="xsm" fontWeight="regular" color="text-4">
-             {courses.writingQ} Writing
+             {courses?.writingQ} Writing
             </GenericText>
           </div>
           
@@ -69,18 +69,18 @@ const CourseCard = ({isCountDown=true,courses}:CourseCardProps) => {
         <div className="border-t border-t-customcolor-400 mt-[12px] xl:mt-[23px] pt-[12px] xl:pt-[18px] flex flex-col-reverse xs:flex-row xs:items-center xs:justify-between">
           <Button size="size-6">Add to cart</Button>
           <div className="flex gap-x-[10px] mb-[8px] xs:mb-0">
-          {parseFloat(courses.discount) > 0 && (
+          {parseFloat(courses?.discount) > 0 && (
               <GenericText
                 size="xlg"
                 color="text-6"
                 fontWeight="semiBold"
                 textDecoration="line-through"
               >
-                Tk. {courses.discount}
+                Tk. {courses?.discount}
               </GenericText>
             )}
             
-            <GenericText size="xlg" fontWeight="semiBold" color="text-5">Tk. {courses.price}</GenericText>
+            <GenericText size="xlg" fontWeight="semiBold" color="text-5">Tk. {courses?.price}</GenericText>
           </div>
         </div>
       </div>

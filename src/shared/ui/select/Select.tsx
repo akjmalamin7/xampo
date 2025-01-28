@@ -44,7 +44,7 @@ const Select = ({
         onBlur={onBlur}
         onFocus={onFocus}
         onChange={handleSelectChange}
-        className="h-[40px] border border-[#74788D] rounded-[4px] w-full px-[15px] text-[#74788D] text-14 outline-none mt-[12px]"
+        className="h-[40px] lg:h-[50px] border border-[#74788D] rounded-[4px] w-full px-[15px] text-[#74788D] text-14 outline-none mt-[12px]"
       >
         {options?.map((option, index) => {
           return (

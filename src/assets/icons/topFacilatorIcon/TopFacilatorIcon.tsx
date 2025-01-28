@@ -9,7 +9,7 @@ const TopFacilatorIcon = ({className}:Props) => {
         <path
           d="M43.5732 40.9509C43.2148 40.9151 42.7848 40.9151 42.3907 40.9509C33.8623 40.6642 27.0898 33.6768 27.0898 25.0767C27.0898 16.2976 34.1848 9.16675 42.9998 9.16675C51.779 9.16675 58.9098 16.2976 58.9098 25.0767C58.874 33.6768 52.1015 40.6642 43.5732 40.9509Z"
           fill="white"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
         <path
           d="M43.5732 40.9509C43.2148 40.9151 42.7848 40.9151 42.3907 40.9509C33.8623 40.6642 27.0898 33.6768 27.0898 25.0767C27.0898 16.2976 34.1848 9.16675 42.9998 9.16675C51.779 9.16675 58.9098 16.2976 58.9098 25.0767C58.874 33.6768 52.1015 40.6642 43.5732 40.9509Z"
@@ -23,7 +23,7 @@ const TopFacilatorIcon = ({className}:Props) => {
         <path
           d="M25.6566 54.1733C16.9849 59.9783 16.9849 69.4383 25.6566 75.2074C35.5107 81.8008 51.6716 81.8008 61.5258 75.2074C70.1974 69.4024 70.1974 59.9424 61.5258 54.1733C51.7074 47.6158 35.5466 47.6158 25.6566 54.1733Z"
           fill="white"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
         <path
           d="M25.6566 54.1733C16.9849 59.9783 16.9849 69.4383 25.6566 75.2074C35.5107 81.8008 51.6716 81.8008 61.5258 75.2074C70.1974 69.4024 70.1974 59.9424 61.5258 54.1733C51.7074 47.6158 35.5466 47.6158 25.6566 54.1733Z"
@@ -41,9 +41,9 @@ const TopFacilatorIcon = ({className}:Props) => {
           width="60.8198"
           height="60.7842"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="6" />
           <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_4292" />
           <feBlend
@@ -60,9 +60,9 @@ const TopFacilatorIcon = ({className}:Props) => {
           width="77.8765"
           height="59.8972"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="6" />
           <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_4292" />
           <feBlend

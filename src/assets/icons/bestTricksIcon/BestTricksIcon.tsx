@@ -9,7 +9,7 @@ const BestTricksIcon = ({ className }: Props) => {
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6667 14.3332 80.8334 32.2498 80.8334H46.5832"
           fill="url(#paint0_linear_1_4269)"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6668 14.3332 80.8334 32.2498 80.8334H46.5832"
@@ -21,7 +21,7 @@ const BestTricksIcon = ({ className }: Props) => {
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6667 14.3332 80.8334 32.2498 80.8334H46.5832"
           fill="url(#paint1_linear_1_4269)"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6668 14.3332 80.8334 32.2498 80.8334H46.5832"
@@ -33,7 +33,7 @@ const BestTricksIcon = ({ className }: Props) => {
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6667 14.3332 80.8334 32.2498 80.8334H46.5832"
           fill="url(#paint2_linear_1_4269)"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
         <path
           d="M78.8332 48.5834V34.2501C78.8332 16.3334 71.6665 9.16675 53.7498 9.16675H32.2498C14.3332 9.16675 7.1665 16.3334 7.1665 34.2501V55.7501C7.1665 73.6668 14.3332 80.8334 32.2498 80.8334H46.5832"
@@ -45,7 +45,7 @@ const BestTricksIcon = ({ className }: Props) => {
         <path
           d="M57.3335 71.6242L62.9952 77.2501L75.2502 62.9167"
           fill="url(#paint3_linear_1_4269)"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
         <path
           d="M57.3335 71.6242L62.9952 77.2501L75.2502 62.9167"
@@ -84,9 +84,9 @@ const BestTricksIcon = ({ className }: Props) => {
           width="100.667"
           height="100.667"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="6" />
           <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_4269" />
           <feBlend
@@ -104,8 +104,8 @@ const BestTricksIcon = ({ className }: Props) => {
           y2="67.9168"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_1_4269"
@@ -115,8 +115,8 @@ const BestTricksIcon = ({ className }: Props) => {
           y2="67.9168"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_1_4269"
@@ -126,8 +126,8 @@ const BestTricksIcon = ({ className }: Props) => {
           y2="67.9168"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_1_4269"
@@ -137,8 +137,8 @@ const BestTricksIcon = ({ className }: Props) => {
           y2="75.008"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

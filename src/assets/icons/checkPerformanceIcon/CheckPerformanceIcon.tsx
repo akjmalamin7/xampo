@@ -16,15 +16,15 @@ const CheckPerformanceIcon = ({className}:Props) => {
 <path d="M56.9609 59.3906H40.6094C39.1208 59.3906 37.9141 60.5974 37.9141 62.0859C37.9141 63.5745 39.1208 64.7812 40.6094 64.7812H56.9609C58.4495 64.7812 59.6562 63.5745 59.6562 62.0859C59.6562 60.5974 58.4495 59.3906 56.9609 59.3906Z" fill="#253642"/>
 <path d="M56.9609 78.2578H40.6094C39.1208 78.2578 37.9141 79.4646 37.9141 80.9531C37.9141 82.4417 39.1208 83.6484 40.6094 83.6484H56.9609C58.4495 83.6484 59.6562 82.4417 59.6562 80.9531C59.6562 79.4646 58.4495 78.2578 56.9609 78.2578Z" fill="#253642"/>
 <defs>
-<filter id="filter0_b_1_3810" x="-8" y="0" width="86" height="108" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_b_1_3810" x="-8" y="0" width="86" height="108" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feGaussianBlur in="BackgroundImageFix" stdDeviation="6"/>
 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_3810"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_3810" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear_1_3810" x1="6.5" y1="22" x2="63" y2="96" gradientUnits="userSpaceOnUse">
-<stop stop-color="white" stop-opacity="0.6"/>
-<stop offset="1" stop-color="white" stop-opacity="0.1"/>
+<stop stopColor="white" stopOpacity="0.6"/>
+<stop offset="1" stopColor="white" stopOpacity="0.1"/>
 </linearGradient>
 </defs>
 </svg>

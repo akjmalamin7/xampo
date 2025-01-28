@@ -1,7 +1,10 @@
 interface Props {
   className?: string;
+  color?:"yellow"|"gray";
 }
-const StarIcon = ({ className }: Props) => {
+const StarIcon = ({color="yellow", className }: Props) => {
+  const starColor = color === "yellow" ? "#F1B44C" : color === "gray" ? "#74788D" : "#F1B44C";
+
   return (
     <svg
       width="18"
@@ -15,7 +18,7 @@ const StarIcon = ({ className }: Props) => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M13.1713 15.7505C13.0528 15.7505 12.9335 15.7228 12.824 15.6658L8.99978 13.6678L5.17628 15.6658C4.92278 15.797 4.61678 15.7745 4.38728 15.6065C4.15628 15.4385 4.04153 15.1543 4.09028 14.873L4.81853 10.652L1.72853 7.66329C1.52303 7.46454 1.44878 7.16604 1.53653 6.89304C1.62428 6.62154 1.85903 6.42279 2.14253 6.38229L6.41753 5.76129L8.32853 1.91679C8.58203 1.40679 9.41828 1.40679 9.67178 1.91679L11.5828 5.76129L15.8578 6.38229C16.1413 6.42279 16.376 6.62154 16.4638 6.89304C16.5515 7.16604 16.4773 7.46454 16.2718 7.66329L13.1818 10.652L13.91 14.873C13.9588 15.1543 13.8433 15.4385 13.613 15.6065C13.4825 15.7025 13.3273 15.7505 13.1713 15.7505Z"
-        fill="#F1B44C"
+        fill= {color}
       />
       <mask
         id="mask0_13_846"
@@ -34,7 +37,7 @@ const StarIcon = ({ className }: Props) => {
         />
       </mask>
       <g mask="url(#mask0_13_846)">
-        <rect width="18" height="18" fill="#F1B44C" />
+        <rect width="18" height="18" fill={starColor} />
       </g>
     </svg>
   );

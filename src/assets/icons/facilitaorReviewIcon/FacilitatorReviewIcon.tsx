@@ -15,8 +15,8 @@ const FacilitatorReviewIcon = ({className}:Props) => {
 <path d="M30.4585 49.4558C34.0405 49.4558 36.9443 46.552 36.9443 42.97C36.9443 39.3879 34.0405 36.4841 30.4585 36.4841C26.8765 36.4841 23.9727 39.3879 23.9727 42.97C23.9727 46.552 26.8765 49.4558 30.4585 49.4558Z" stroke="#292D32" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
 <path d="M42.9998 67.5158C42.4982 62.32 38.3773 58.235 33.1815 57.7691C31.3898 57.59 29.5623 57.59 27.7348 57.7691C22.539 58.2708 18.4182 62.32 17.9165 67.5158" stroke="#292D32" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
 <defs>
-<filter id="filter0_b_1_3864" x="-5" y="8" width="94" height="86" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_b_1_3864" x="-5" y="8" width="94" height="86" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feGaussianBlur in="BackgroundImageFix" stdDeviation="6"/>
 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_3864"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_3864" result="shape"/>

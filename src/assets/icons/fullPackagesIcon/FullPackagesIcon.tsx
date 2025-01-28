@@ -18,7 +18,7 @@ const FullPackagesIcon = ({ type, className }: Props) => {
         <path
           d="M57.3333 15.405C69.2658 16.05 75.25 20.4575 75.25 36.8334V58.3334C75.25 72.6667 71.6667 79.8334 53.75 79.8334H32.25C14.3333 79.8334 10.75 72.6667 10.75 58.3334V36.8334C10.75 20.4934 16.7342 16.05 28.6667 15.405"
           fill="white"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
         <path
           d="M57.3333 15.405C69.2658 16.05 75.25 20.4575 75.25 36.8334V58.3334C75.25 72.6667 71.6667 79.8334 53.75 79.8334H32.25C14.3333 79.8334 10.75 72.6667 10.75 58.3334V36.8334C10.75 20.4934 16.7342 16.05 28.6667 15.405"
@@ -47,7 +47,7 @@ const FullPackagesIcon = ({ type, className }: Props) => {
         <path
           d="M35.8332 22.5001H50.1665C57.3332 22.5001 57.3332 18.9167 57.3332 15.3334C57.3332 8.16675 53.7498 8.16675 50.1665 8.16675H35.8332C32.2498 8.16675 28.6665 8.16675 28.6665 15.3334C28.6665 22.5001 32.2498 22.5001 35.8332 22.5001Z"
           fill="white"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
           stroke="#253642"
           strokeWidth="5"
           strokeMiterlimit="10"
@@ -63,9 +63,9 @@ const FullPackagesIcon = ({ type, className }: Props) => {
           width="93.5"
           height="100.667"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="6" />
           <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_4282" />
           <feBlend
@@ -97,7 +97,7 @@ const FullPackagesIcon = ({ type, className }: Props) => {
         <path
           d="M41.2083 70.25H40.3255L40.216 71.126L38.3561 86.0052L36.1139 87.5H17.5528L15.3105 86.0052L13.4506 71.126L13.3411 70.25H12.4583H8.92777L3.875 66.8815V22.993L8.86107 20.5H82.2935L85.68 21.3466L89.0833 25.6008V64.3056L87.3778 67.7166L84 70.25H41.2083Z"
           stroke="white"
-          stroke-opacity="0.3"
+          strokeOpacity="0.3"
           strokeWidth="2"
           style={{ mixBlendMode: "overlay" }}
         />
@@ -138,9 +138,9 @@ const FullPackagesIcon = ({ type, className }: Props) => {
           width="111.208"
           height="93"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="6" />
           <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_3791" />
           <feBlend
@@ -158,8 +158,8 @@ const FullPackagesIcon = ({ type, className }: Props) => {
           y2="47.742"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" stop-opacity="0.6" />
-          <stop offset="1" stop-color="white" stop-opacity="0.1" />
+          <stop stopColor="white" stopOpacity="0.6" />
+          <stop offset="1" stopColor="white" stopOpacity="0.1" />
         </linearGradient>
       </defs>
     </svg>
